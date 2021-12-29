@@ -9,15 +9,15 @@ jobs:
       - image: circleci/node:16
     steps:
       - checkout
-      - yarn install
-      - yarn test
+      - npm install
+      - npm test
   build:
     docker:
       - image: circleci/node:16
     steps:
       - checkout
-      - yarn install
-      - yarn build
+      - npm install
+      - npm build
 
 workflows:
   test_and_build:
