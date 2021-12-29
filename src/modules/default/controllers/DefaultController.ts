@@ -10,6 +10,7 @@ export default class DefaultController {
     this.bootstrapRoutes();
   }
 
+  /* istanbul ignore next */
   private bootstrapRoutes() {
     this.router.use(RoutesContants.SLASH, DefaultService.getHelloMessage);
   }

@@ -5,7 +5,7 @@ import Logger from '../commnons/logger/Logger';
 import MessagesConstants from '../constants/MessagesConstants';
 
 export default class ExpressServer {
-  public server: Express;
+  private server: Express;
 
   public constructor() {
     this.server = express();
