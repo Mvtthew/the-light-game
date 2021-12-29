@@ -9,4 +9,5 @@ module.exports = {
     '!./src/index.ts',
   ],
   coverageReporters: ['text', 'text-summary', 'html'],
+  setupFilesAfterEnv: ['./src/tests/setup.ts'],
 };

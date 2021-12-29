@@ -34,6 +34,7 @@
         "function-paren-newline": [
             "error",
             "multiline-arguments"
-        ]
+        ],
+        "max-len": ["error", {"code": 140}]
     }
 }
