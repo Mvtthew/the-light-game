@@ -1,12 +1,12 @@
 import ExpressServer from '../../server/ExpressServer';
-import DefaultModule from './DefaultModule';
+import UsersModule from './UsersModule';
 
-describe('DefaultModule', () => {
+describe('UsersModule', () => {
   it('should bootstrap router', () => {
     const server = new ExpressServer();
     (server as any).server.use = jest.fn();
 
-    DefaultModule.bootstrap(server);
+    UsersModule.bootstrap(server);
 
     expect((server as any).server.use).toBeCalled();
   });

@@ -5,6 +5,7 @@ module.exports = {
     './src/**',
     '!**/node_modules/**',
     '!**/config/**',
+    '!**/models/**',
     '!./src/App.ts',
     '!./src/index.ts',
   ],

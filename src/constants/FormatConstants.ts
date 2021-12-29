@@ -1,0 +1,3 @@
+export default {
+  FULLYEAR_MONTH_DAY_HOUR_MINUTE_SECOUND: 'YYYY-MM-DD HH:mm:ss',
+};

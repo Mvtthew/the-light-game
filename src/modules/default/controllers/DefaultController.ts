@@ -11,7 +11,7 @@ export default class DefaultController {
   }
 
   /* istanbul ignore next */
-  private bootstrapRoutes() {
+  private bootstrapRoutes(): void {
     this.router.use(RoutesContants.SLASH, DefaultService.getHelloMessage);
   }
 
