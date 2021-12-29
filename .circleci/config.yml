@@ -5,11 +5,17 @@ orbs:
 
 jobs: 
   test:
+    docker:
+      - image: circleci/node:16
     steps:
+      - checkout
       - yarn install
       - yarn test
   build:
+    docker:
+      - image: circleci/node:16
     steps:
+      - checkout
       - yarn install
       - yarn build
 
