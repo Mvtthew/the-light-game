@@ -3,12 +3,18 @@ version: 2.1
 orbs:
   node: circleci/node@4.7
 
+jobs: 
+  test:
+    steps:
+      - yarn install
+      - yarn test
+  build:
+    steps:
+      - yarn install
+      - yarn build
+
 workflows:
-  sample:
+  test_and_build:
     jobs:
-      - node/test:
-          version: '16.10'
-          pkg-manager: yarn
-      - node/build:
-          version: '16.10'
-          pkg-manager: yarn
+      - test
+      - build
