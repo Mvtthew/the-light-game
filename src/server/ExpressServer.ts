@@ -15,8 +15,8 @@ export default class ExpressServer {
     this.server.use(middleware);
   }
 
-  public loadRouter(router: Router): void {
-    this.loadMiddleware(router);
+  public loadRouter(baseRoute: string, router: Router): void {
+    this.server.use(baseRoute, router);
   }
 
   public listen(port: number): void {
