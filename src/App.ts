@@ -2,8 +2,8 @@ import cors from 'cors';
 import express from 'express';
 import DotEnvConfig from './commnons/config/DotEnvConfig';
 import Database from './commnons/database/Database';
-import RoutesContants from './constants/RoutesContants';
 import DefaultModule from './modules/default/DefaultModule';
+import UsersModule from './modules/users/UsersModule';
 import ExpressServer from './server/ExpressServer';
 
 export default class App {
@@ -27,7 +27,8 @@ export default class App {
     this.server.loadMiddleware(cors());
     this.server.loadMiddleware(express.json());
 
-    this.server.loadRouter(RoutesContants.SLASH, DefaultModule.router());
+    DefaultModule.bootstrap(this.server);
+    UsersModule.bootstrap(this.server);
 
     this.server.listen(+DotEnvConfig.getByKey('SERVER_LISTEN_PORT'));
   }
